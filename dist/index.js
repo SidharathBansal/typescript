@@ -68,3 +68,20 @@ class Person {
 }
 const brad = new Person(1, "brad");
 const mike = new Person(2, "mike");
+// Sub Classes
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, "Sid", "CEO");
+// Generics
+function getArray(items) {
+    return new Array().concat(items);
+}
+let numArray = getArray([1, 2, 3, 4]);
+let strArray = getArray(["brad", "shawn", "hello"]);
+console.log(strArray);
+numArray.push("hello");
+console.log(numArray);
